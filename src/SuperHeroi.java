@@ -12,4 +12,8 @@ public class SuperHeroi {
             System.out.println(habilidades[i]);
         }
     }
+
+    public enum Sexo{
+        MULHER, HOMEM, OUTRO, PREFIRO_NAO_DIZER
+    }
 }
