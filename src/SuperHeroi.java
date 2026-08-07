@@ -1,10 +1,10 @@
 // NÃO ALTERE ANTES DE LER OS PASSOS
 public class SuperHeroi {
-    public String nome;
-    public Sexo sexo;
-    public double altura;
-    public boolean identidadeSecreta;
-    public String[] habilidades;
+    private String nome;
+    private Sexo sexo;
+    private double altura;
+    private boolean identidadeSecreta;
+    private String[] habilidades;
 
     public void mostrar() {
         System.out.println(nome + " - " + sexo + " - " + altura);
