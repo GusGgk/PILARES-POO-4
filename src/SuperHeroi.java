@@ -2,66 +2,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 // NÃO ALTERE ANTES DE LER OS PASSOS
-public class SuperHeroi {
-    private String nome;
-    private Sexo sexo;
-    private double altura;
+public class SuperHeroi extends Personagem {
+    private String nomeDeGuerra;
     private boolean identidadeSecreta;
     private List<String> habilidades;
 
-    public SuperHeroi(String nome, double altura, Sexo sexo, boolean identidadeSecreta, List<String> habilidades){
+    public SuperHeroi(String nome, double altura, Sexo sexo,String nomeDeGuerra, boolean identidadeSecreta, List<String> habilidades){
 
-        if (nome == null || nome.trim().isEmpty()){
-            throw new IllegalArgumentException("O nome do personagem deve ser preenchido");
-        }
-        if (altura < 0.5 || altura > 3.0){
-            throw new IllegalArgumentException("A altura do personagem deve ser realista");
-        }
-
-        this.nome = nome;
-        this.altura = altura;
-        this.sexo = sexo;
+        super(nome, sexo, altura);
+        this.nomeDeGuerra = nomeDeGuerra;
         this.identidadeSecreta = identidadeSecreta;
         this.habilidades = new ArrayList<>(habilidades);
+    }
 
-
-
+    @Override
+    public String apresentar() {
+        return "Eu sou o herói " + nomeDeGuerra
+                + ", tenho " + getAltura() + "m"
+                + " e minhas habilidades são " + habilidades + " Meu nome de verdade é: " + getNome() + " e meu gênero: " + getSexo()   ;
     }
 
     public void getIdentidadeSecreta(){
         if ( this.identidadeSecreta == true){
             revelarIdentidade("??? (identidade protegida)");
         } else {
-            revelarIdentidade(this.nome);
+            revelarIdentidade(getNome());
         }
+    }public void revelarIdentidade(String mensagem){System.out.println(mensagem);}
+
+    public String getNomeDeGuerra() {
+        return nomeDeGuerra;
     }
 
-    public void revelarIdentidade(String mensagem){
-        System.out.println(mensagem);
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Sexo getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setNomeDeGuerra(String nomeDeGuerra) {
+        this.nomeDeGuerra = nomeDeGuerra;
     }
 
     public boolean isIdentidadeSecreta() {
@@ -77,14 +51,9 @@ public class SuperHeroi {
     }
 
     public void setHabilidades(List<String> habilidades) {
-        this.habilidades = habilidades;
+
+        this.habilidades = new ArrayList<>(habilidades);
     }
 
-    public void mostrar() {
-        System.out.println(nome + " - " + sexo + " - " + altura);
-        for (int i = 0; i < habilidades.size(); i++) {
-            System.out.println(habilidades.get(i));
-        }
-    }
 
 }
