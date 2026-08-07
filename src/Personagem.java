@@ -9,7 +9,7 @@ public abstract class Personagem {
     private List<String> habilidades;
 
 
-    public Personagem(String nome, double altura, Sexo sexo, boolean identidadeSecreta){
+    public Personagem(String nome, double altura, Sexo sexo, boolean identidadeSecreta, List habilidades){
 
         if (nome == null || nome.trim().isEmpty()){
             throw new IllegalArgumentException("O nome do personagem deve ser preenchido");
@@ -22,6 +22,8 @@ public abstract class Personagem {
         this.altura = altura;
         this.sexo = sexo;
         this.identidadeSecreta = identidadeSecreta;
+        this.habilidades = habilidades;
+
 
 
     }
