@@ -13,5 +13,13 @@ public class Main {
         h.altura = -300;
         h.nome = "";
         h.mostrar();
+
+
+        Personagem p = new Personagem();
+        p.nome = "Lisiane Reips";
+        p.sexo = Sexo.MULHER;
+        p.altura = 1.75;
+        p.apresentar();
+
     }
 }
