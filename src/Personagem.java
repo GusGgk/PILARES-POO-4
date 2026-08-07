@@ -1,10 +1,7 @@
 public abstract class Personagem {
     private String nome;
-    private String sexo;
+    private Sexo sexo;
     private double altura;
 
-    public abstract String apresentar(){
-        
-    }
-
+    public abstract String apresentar();
 }
