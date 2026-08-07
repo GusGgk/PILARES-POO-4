@@ -9,7 +9,7 @@ public class SuperHeroi {
     private boolean identidadeSecreta;
     private List<String> habilidades;
 
-    public SuperHeroi(String nome, double altura, Sexo sexo, boolean identidadeSecreta, List habilidades){
+    public SuperHeroi(String nome, double altura, Sexo sexo, boolean identidadeSecreta, List<String> habilidades){
 
         if (nome == null || nome.trim().isEmpty()){
             throw new IllegalArgumentException("O nome do personagem deve ser preenchido");
@@ -22,7 +22,7 @@ public class SuperHeroi {
         this.altura = altura;
         this.sexo = sexo;
         this.identidadeSecreta = identidadeSecreta;
-        this.habilidades = habilidades;
+        this.habilidades = new ArrayList<>(habilidades);
 
 
 
@@ -82,8 +82,8 @@ public class SuperHeroi {
 
     public void mostrar() {
         System.out.println(nome + " - " + sexo + " - " + altura);
-        for (int i = 0; i < habilidades.length; i++) {
-            System.out.println(habilidades[i]);
+        for (int i = 0; i < habilidades.size(); i++) {
+            System.out.println(habilidades.get(i));
         }
     }
 

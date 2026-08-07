@@ -1,3 +1,4 @@
+## Missao 0
 ### Arquiteto Passo 0
 Eduardo Blasczak- Eduardo passou o passo a passo para configurar o setup
 ### Piloto Passo 0
@@ -19,6 +20,8 @@ sopro congelante
   sopro congelante
 "
 
+
+## Missao 1
 ### Arquiteto Passo 1
 Eduardo Blasczak - Repassou todas as instruções da Missão 1 e pesquisou a sintaxe de enum
 ### Piloto Passo 1
@@ -47,3 +50,31 @@ sopro congelante"
 Não funcionou pois uma classe abstrata não pode ser instanciada
 Saida Personagem:
 "java: Personagem is abstract; cannot be instantiated"
+
+---
+## Missao 2
+
+### Arquiteto Passo 2
+Mateus Dos Santos - Passou todas as informações e pesquisou maneiras praticas para serem realizadas 
+### Piloto Passo 2
+André Gritten - seguiu as descrições e missões propostas e fez o encapsulamento no Personagem
+### Revisor Passo 2
+Gustavo Giacoia - Realizou o seguinte teste: Mudou a main para o construtor que o andre fez, e realizou o primeiro teste:
+Lisiane Reips - MULHER - 1.75
+super força
+voar
+teleporte
+??? (identidade protegida)
+Habilidades originais:
+[super força, voar, teleporte]
+onde foi realizado também o teste de identidade caso a pessoa tivesse uma identidade secreta.
+
+O segundo teste foi em relação a altura e também com o lista denfensiva (copia):
+Lista modificada (cópia):
+[super força, teleporte, teletransporte]
+
+Lista do objeto:
+[super força, voar, teleporte]
+Aqui podemos ver que o objeto original não foi modificado. Apenas a cópia foi modificada, graças ao getHabilidades que retorna uma cópia da lista.
+
+---
