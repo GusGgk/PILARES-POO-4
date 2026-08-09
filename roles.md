@@ -94,5 +94,11 @@ Identidade do héroi:
 
 Essa foi a saída, mostrando que a herança está funcionando perfeitamente. Além claro, nenhum dos atributos está sendo duplicado
 o super sempre é usado nos construtores e o Vilão não é subclasse do Herói pois não faz sentido na hierarquia, o correto seria ele ser um personagem, que é a classe pai para todas as outras.
-
-
+---
+## Missão 4
+### Arquiteto Passo 4
+André Gritten - Preparou e organizou as etapas do projeto, por classes para facilitar ao escritor
+### Escritor Passo 4
+Gustavo Giacoia - Alterou todas as classes, incluindo agora a sobrecarga de métodos.
+### Revisor Passo 4
+Eduardo Blasczak - 

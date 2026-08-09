@@ -21,6 +21,11 @@ public class Vilao extends Personagem {
                 + nivelDeAmeaca + ".";
     }
 
+    @Override
+    public void agir() {
+        System.out.println(getNome() + " ataca com poder equivalente ao seu nível de ameaça (" + nivelDeAmeaca + ")!");
+    }
+
     public int getNivelDeAmeaca() {
         return nivelDeAmeaca;
     }

@@ -14,6 +14,11 @@ public class Civil extends Personagem{
                 + profissao + ".";
     }
 
+    @Override
+    public void agir() {
+        System.out.println(getNome() + " pede socorro desesperadamente!");
+    }
+
     public String getProfissao() {
         return profissao;
     }

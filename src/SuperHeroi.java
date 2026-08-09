@@ -22,6 +22,35 @@ public class SuperHeroi extends Personagem {
                 + " e minhas habilidades são " + habilidades + " Meu nome de verdade é: " + getNome() + " e meu gênero: " + getSexo()   ;
     }
 
+    @Override
+    public void agir() {
+        usarHabilidade();
+    }
+
+    public void usarHabilidade() {
+        if (!habilidades.isEmpty()) {
+            System.out.println(nomeDeGuerra + " usou a habilidade: " + habilidades.get(0));
+        } else {
+            System.out.println(nomeDeGuerra + " não possui habilidades para usar!");
+        }
+    }
+
+    public void usarHabilidade(int indice) {
+        if (indice >= 0 && indice < habilidades.size()) {
+            System.out.println(nomeDeGuerra + " usou a habilidade: " + habilidades.get(indice));
+        } else {
+            System.out.println(nomeDeGuerra + " tentou usar uma habilidade em um índice inválido (" + indice + ")!");
+        }
+    }
+
+    public void usarHabilidade(String nome) {
+        if (habilidades.contains(nome)) {
+            System.out.println(nomeDeGuerra + " usou a habilidade: " + nome);
+        } else {
+            System.out.println(nomeDeGuerra + " tentou usar a habilidade " + nome + " mas não a possui!");
+        }
+    }
+
     public void getIdentidadeSecreta(){
         if ( this.identidadeSecreta == true){
             revelarIdentidade("??? (identidade protegida)");
