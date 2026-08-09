@@ -101,4 +101,31 @@ André Gritten - Preparou e organizou as etapas do projeto, por classes para fac
 ### Escritor Passo 4
 Gustavo Giacoia - Alterou todas as classes, incluindo agora a sobrecarga de métodos.
 ### Revisor Passo 4
-Eduardo Blasczak - 
+Eduardo Blasczak - Saida:
+"
+Eu sou o herói Super Prof, tenho 1.75m e minhas habilidades são [super força, voar, teleporte] Meu nome de verdade é: Lisiane Reips e meu gênero: MULHER
+Super Prof usou a habilidade: super força
+Detalhes: Personagem [nome=Lisiane Reips, sexo=MULHER, altura=1.75]
+----------------
+Eu sou o vilão Gritten Malfoy e minha altura é de 1.9m e meu gênero é:OUTRO e meu nível de ameaça é 9.
+Gritten Malfoy ataca com poder equivalente ao seu nível de ameaça (9)!
+Detalhes: Personagem [nome=Gritten Malfoy, sexo=OUTRO, altura=1.9]
+----------------
+Meu nome é Mateus NPC e minha profissão é VibeCoder.
+Mateus NPC pede socorro desesperadamente!
+Detalhes: Personagem [nome=Mateus NPC, sexo=HOMEM, altura=1.8]
+----------------
+Testando sobrecarga de habilidades (Super-Herói):
+Super Prof usou a habilidade: super força
+Super Prof usou a habilidade: teleporte
+Super Prof tentou usar uma habilidade em um índice inválido (10)!
+Super Prof usou a habilidade: voar
+Super Prof tentou usar a habilidade ficar invisível mas não a possui!
+----------------
+Identidade do héroi:
+??? (identidade protegida)
+"
+
+O teste foi feito, e nada no Main possui if ou instanceOf, tudo está sendo feito pela sobrecarga de métodos. E caso o índice passado para o super herói seja inválido, ele lançará uma exceção.
+---
+## BOSS
