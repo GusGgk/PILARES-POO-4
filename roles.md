@@ -78,3 +78,21 @@ Lista do objeto:
 Aqui podemos ver que o objeto original não foi modificado. Apenas a cópia foi modificada, graças ao getHabilidades que retorna uma cópia da lista.
 
 ---
+
+## Missão 3
+### Arquiteto Passo 3
+Mateus dos Santos - Passou todas as informações e pesquisou maneiras praticas para serem realizadas
+### Escritor Passo 3
+Gustavo Giacoia - Desenvolveu a aplicação, criando as novas classes e ajustando da maneira necessária.
+### Revisor Passo 3
+André Gritten - Realizou os testes e validações da Missão 3:
+"Eu sou o herói Super Prof, tenho 1.75m e minhas habilidades são [super força, voar, teleporte] Meu nome de verdade é: Lisiane Reips e meu gênero: MULHER
+Eu sou o vilão Gritten Malfoy e minha altura é de 1.9m e meu gênero é:OUTRO e meu nível de ameaça é 9.
+Meu nome é Mateus NPC e minha profissão é VibeCoder.
+Identidade do héroi:
+??? (identidade protegida)"
+
+Essa foi a saída, mostrando que a herança está funcionando perfeitamente. Além claro, nenhum dos atributos está sendo duplicado
+o super sempre é usado nos construtores e o Vilão não é subclasse do Herói pois não faz sentido na hierarquia, o correto seria ele ser um personagem, que é a classe pai para todas as outras.
+
+
