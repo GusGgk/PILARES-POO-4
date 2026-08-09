@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// NÃO ALTERE ANTES DE LER OS PASSOS
+
 public class SuperHeroi extends Personagem {
     private String nomeDeGuerra;
     private boolean identidadeSecreta;

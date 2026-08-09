@@ -129,3 +129,21 @@ Identidade do héroi:
 O teste foi feito, e nada no Main possui if ou instanceOf, tudo está sendo feito pela sobrecarga de métodos. E caso o índice passado para o super herói seja inválido, ele lançará uma exceção.
 ---
 ## BOSS
+### Arquiteto Boss
+Eduardo Blasczak - Pesquisou e repassou todas as instruções para a MISSÃO BOSS
+
+### Escritor Boss
+Gustavo Giacoia - Foi criado a Classe Batalha, tudo com private e com os métodos necessários, na Main, foi feito seis personagens (2 de cada), vilão, civil e heróis.
+
+### Revisor Boss
+Gustavo Giacoia - 
+Como Testador, percebi que a saída do console precisava de melhorias visuais para que os logs ficassem claros para os jogadores. Portanto, adicionei divisórias, emojis e rótulos (`[AVISO]`, `[DERROTA]`) para melhorar a experiência.
+
+Além disso, vou explicar onde os **4 Pilares da Programação Orientada a Objetos** estão aplicados em nosso código:
+
+1. **Abstração:** Na classe `Personagem`. Ignoramos detalhes da vida real de uma pessoa que não interessam para um jogo (como CPF, RG) e trouxemos apenas características essenciais para o domínio do sistema: `nome`, `sexo`, `altura` e a ação de `agir()`.
+2. **Encapsulamento:** Usamos modificadores `private` na lista de `participantes` na classe `Batalha` e nos atributos das outras classes (`nome`, `altura`, etc.). Assim, blindamos os dados contra alterações indevidas (como alguém acessar `participantes.clear()` direto da Main). O acesso só ocorre por métodos controlados (`adicionar()`, `removerDerrotado()`).
+3. **Herança:** Na classe `SuperHeroi` (que faz `extends Personagem`). O herói herda todos os atributos e métodos base do personagem sem precisarmos reescrevê-los, adicionando apenas o que é exclusivo dele (como `nomeDeGuerra` e `habilidades`).
+4. **Polimorfismo:** Na classe `Batalha`, no método `iniciar()`. Temos um `for (Personagem p : participantes)` onde chamamos o método `p.agir()`. O polimorfismo faz com que, sem usarmos nenhum `if` ou `instanceof`, o Java saiba executar a versão correta do `agir()` (herói usa habilidade, vilão ataca e civil pede socorro) em tempo de execução, apenas chamando o mesmo método de forma genérica.
+
+
